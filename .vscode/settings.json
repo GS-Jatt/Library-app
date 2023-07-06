@@ -1,0 +1,5 @@
+{
+    "window.autoDetectColorScheme": false,
+    "window.closeWhenEmpty": false,
+    "files.autoSave": "onFocusChange"
+}

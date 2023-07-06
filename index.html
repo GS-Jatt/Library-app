@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Library</title>
+
+  <!-- Layout styles -->
+  <!-- <link rel="stylesheet" href="assets/css/icons.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <link rel="stylesheet" href="new.css">
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!--sidebar-->
+    <nav class="sidebar sidebar-offcanvas hiddennn" id="sidebar">
+      <!-- logo  -->
+
+      <!-- <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="logo.png" alt="logo" /></a>
+
+      </div> -->
+      <ul class="nav no-scroll" >
+
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <button class="nav-link btn-side-bar" id="books">
+            <span class="menu-icon">
+              <i class="mdi mdi-bookshelf logo-color"></i>
+            </span>
+            <span class="menu-title"> Books</span>
+          </button>
+        </li>
+        <li class="nav-item menu-items" id="std-only">
+          <button class="nav-link btn-side-bar" id="dashboard-btn">
+            <span class="menu-icon">
+              <i class="mdi mdi-view-dashboard logo-color" ></i>
+            </span>
+            <span class="menu-title "> Dashboard</span>
+          </button>
+        </li>
+        <li class="nav-item menu-items admin-only hiddennn ">
+          <button class="nav-link btn-side-bar" id="issued-to-user-btn">
+            <span class="menu-icon">
+              <i class="mdi mdi-book-check logo-color"></i>
+            </span>
+            <span class="menu-title"> Issued Books</span>
+          </button>
+        </li>
+
+        <li class="nav-item menu-items admin-only hiddennn ">
+          <button class="nav-link btn-side-bar" id="btn-add-book">
+            <span class="menu-icon">
+              <i class="mdi mdi-book-plus-multiple-outline logo-color"></i>
+            </span>
+            <span class="menu-title"> Add new book</span>
+          </button>
+        </li>
+        <li class="nav-item menu-items admin-only hiddennn">
+          <button class="nav-link btn-side-bar" id="btn-add-user">
+            <span class="menu-icon">
+              <i class="mdi mdi-account-multiple-plus logo-color"></i>
+            </span>
+            <span class="menu-title"> Add new user</span>
+          </button>
+        </li>
+        <li class="nav-item menu-items admin-only hiddennn">
+          <button class="nav-link btn-side-bar" id="issue-page">
+            <span class="menu-icon">
+              <i class="mdi mdi-notebook-edit-outline logo-color"></i>
+            </span>
+            <span class="menu-title"> Issue book</span>
+          </button>
+        </li>
+        <li class="nav-item menu-items admin-only hiddennn">
+          <button class="nav-link btn-side-bar" id="return-p">
+            <span class="menu-icon">
+              <i class="mdi mdi-book-sync logo-color"></i>
+            </span>
+            <span class="menu-title">Book return</span>
+          </button>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="container-fluid page-body-wrapper">
+
+      <!-- top bar-->
+      <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <!-- logo  -->
+  
+
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <a class="sidebar-brand brand-logo" href="index.html"><img height="63px" src="logo.png" alt="logo" /></a>
+
+            </li>
+          </ul>
+          <!-- <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                <input type="text" class="form-control" placeholder="Search products">
+              </form>
+            </li>
+          </ul> -->
+          <ul class="navbar-nav navbar-nav-right">
+
+            <!-- <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                data-toggle="dropdown">
+                <i class="mdi mdi-bell"></i>
+                <span class="count bg-danger"></span>
+              </a>
+            </li> -->
+            <li class="nav-item hiddennn " id="user-logo">
+              <span class="mdi mdi-logout text-danger" onclick="window.location.reload()"></span>
+            </li>
+            <li class="nav-item " id="login-logo">
+              <span class="mdi mdi-login "></span>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- search bar top -->
+      <div class="hiddennn" id="search-bar">
+        <nav class="navbar p-0 fixed-top d-flex flex-row search-bar ">
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch ">
+
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link  d-flex">
+                  <input type="text" class="form-control" placeholder="Search products" id="search-txt">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-dark dropdown-toggle search-by-btn" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="mdi mdi-filter-cog"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuIconButton7"
+                      style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 39px, 0px);">
+                      <h6 class="dropdown-header">Search By</h6>
+                      <div class="form-check">
+                        <input class="form-check-input search-by-btn" type="radio" name="type" id="fiction" value="name"
+                          checked>
+                        <label class="form-check-label" for="fiction">
+                          by Name
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input search-by-btn" type="radio" name="type" id="programming"
+                          value="athuor">
+                        <label class="form-check-label" for="athuor">
+                          author
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <input class="form-check-input search-by-btn" type="radio" name="type" id="cooking"
+                          value="publisher">
+                        <label class="form-check-label" for="cooking">
+                          Publisher
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <input class="form-check-input search-by-btn" type="radio" name="type" id="btype" value="type">
+                        <label class="form-check-label" for="cooking">
+                          type
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-dark btn-rounded btn-icon" id="search">
+                    <i class="mdi mdi-note-search"></i>
+                  </button>
+                </form>
+
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+
+      </div>
+
+
+
+      <!-- main content area-->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <hr>
+          <br>
+
+
+          <!-- login page -->
+          <div id="login-p">
+            <div class="row">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+
+                  <!-- first image -->
+                  <img src="l3.png" width="100%" alt="">
+
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="justify-content-between">
+                      <h4 class="card-title mb-1">Welcome to the official Library website of Amar Saheed Baba Ajit
+                        Singh
+                        Jujhar Singh Memorial College, Bela.</details>
+                      </h4>
+                      <p class="text-muted mb-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt iure ad at, voluptas
+                        atque, eos esse labore earum doloribus doloremque facere explicabo! Quod odit facilis nihil
+                        debitis, error vel quos autem! Nihil consequatur quam nostrum ab pariatur perferendis! Ex,
+                        voluptas corrupti autem voluptatem alias reprehenderit maxime repudiandae nobis vitae!
+                      </p>
+                      <button id="login">login</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- login pop -->
+            <div class="card login-pop hiddennn">
+              <button class="btnnn">X</button>
+              <div class="card-body px-5 py-5">
+                <h3 class="card-title text-left mb-3">Login</h3>
+                <form>
+                  <div class="form-group">
+                    <label>User ID *</label>
+                    <input type="text" class="form-control p_input" id="user">
+                  </div>
+                  <div class="form-group">
+                    <label>Password *</label>
+                    <input type="text" class="form-control p_input" id="passwd">
+                    <p id="check-user"></p>
+                  </div>
+
+                  <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input"> Remember me </label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot password</a>
+                  </div>
+
+                </form>
+                <div class="text-center">
+                  <button class="btn btn-primary btn-block enter-btn" id="subb">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- student page -->
+          <div class="row hiddennn " id="std-p">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Books</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Id </th>
+                          <th> Author </th>
+                          <th> Publisher </th>
+                          <th> Type </th>
+                          <th> Locker no </th>
+                          <!-- <th> other book option </th> -->
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- add new book -->
+          <div id="add-new-book-form" class="hiddennn">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add new Book form</h4>
+                  <form class="forms-sample" id="add-book-form">
+                    <div class="form-group">
+                      <label for="bookID">Book Id</label>
+                      <input type="number" class="form-control" id="bookID" placeholder="Book id" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="book name">Book Name</label>
+                      <input type="text" class="form-control" id="bookName" placeholder="book name">
+                    </div>
+                    <div class="form-group">
+                      <label for="author">Author</label>
+                      <input type="text" class="form-control" id="author" placeholder="Auther name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="publisher">Publisher</label>
+                      <input type="text" class="form-control" id="bookPublisher" placeholder="publisher"
+                        required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="type">Book type</label>
+                      <input type="text" class="form-control" id="bookType" placeholder="book Type" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="type">Locker No</label>
+                      <input type="number" class="form-control" id="locker-no" placeholder="" required="required">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- add new user -->
+          <div id="add-new-user-form" class="hiddennn">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add new User form</h4>
+                  <form class="forms-sample" id="add-user-form">
+                    <div class="form-group">
+                      <label for="user name">User Name</label>
+                      <input type="text" class="form-control" id="userName" placeholder="User name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="Class">Class</label>
+                      <input type="text" class="form-control" id="classs" placeholder="Class" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="passwd">password</label>
+                      <input type="password" class="form-control" id="passwd3" placeholder="password" required="required">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- issue a book to std -->
+          <div id="issue-book-user-form" class="hiddennn">
+            <div class="row">
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">issue book form</h4>
+                    <form class="forms-sample" id="issue-book-form">
+                      <div class="form-group">
+                        <label for="user name">User ID</label>
+                        <input type="number" class="form-control" id="user-id" placeholder="User ID"
+                          required="required">
+                      </div>
+                      <div class="form-group">
+                        <label for="Class">Book ID</label>
+                        <input type="number" class="form-control" id="book-id" placeholder="Book ID"
+                          required="required">
+                      </div>
+                      <div class="form-group">
+                        <label for="Class">Date</label>
+                        <input type="date" class="form-control" id="date" placeholder="date" required="required">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">User and book details</h4>
+                    <div class="row">
+                      <div class="col-md-6 grid-margin stretch-card ">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">User details</h4>
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th> Name </th>
+                                    <th> Claass </th>
+                                  </tr>
+
+                                </thead>
+                                <tbody id="issue-user-tableBody">
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 grid-margin 
+                      stretch-card ">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">book details</h4>
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th> Book Name </th>
+                                    <th> auther </th>
+                                    <th> pusblisher </th>
+
+                                  </tr>
+                                </thead>
+                                <tbody id="issue-book-tableBody">
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- book issued to user -->
+          <div class="row hiddennn " id="issued-to-user">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">issued Books</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th> Book Name </th>
+                          <th> Id </th>
+                          <th> Date </th>
+                          <th> Student Name </th>
+                          <th> Class </th>
+                          <th> ID </th>
+                        </tr>
+                      </thead>
+                      <tbody id="issued-tableBody">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--student dashboard  -->
+          <div class="row hiddennn " id="user-dashboard">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Books</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th> Book Name </th>
+                          <th> Id </th>
+                          <th> Date </th>
+                        </tr>
+                      </thead>
+                      <tbody id="dashboard-tableBody">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- book return -->
+          <div class="row hiddennn " id="return-page">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Book Id </h4>
+                  <form class="forms-sample" id="return-book-form">
+                    <div class="form-group">
+                      <label for="user name">Book ID</label>
+                      <input type="number" class="form-control" id="return-book-id" placeholder="Book ID"
+                        required="required">
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th> Book Name </th>
+                            <th> Author </th>
+                            <th> Name </th>
+                            <th> ID </th>
+                            <th> Locker no </th>
+                            <!-- <th> other book option </th> -->
+                          </tr>
+                        </thead>
+                        <tbody id="return-tableBody">
+  
+                        </tbody>
+                      </table>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © .com
+              2023</span>
+
+          </div>
+
+
+        </footer>
+        <!-- buttom bar -->
+        <div class="buttom-bar hiddennn" id="buttom-bar">
+          <nav class="navbar p-0 fixed-bottom d-flex flex-row ">
+
+            <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch w-100">
+              <ul class="navbar-nav w-100">
+                <li class="nav-item w-100">
+                  <button class="nav-link btn-buttom-bar" id="books1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-bookshelf"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100" id="std-only1">
+                  <button class="nav-link btn-buttom-bar">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-view-dashboard"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100 admin-only hiddennn">
+                  <button class="nav-link btn-buttom-bar" id="issued-to-user-btn1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-book-check"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100 admin-only hiddennn">
+                  <button class="nav-link btn-buttom-bar" id="btn-add-book1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-book-plus-multiple-outline"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100 admin-only hiddennn">
+                  <button class="nav-link btn-buttom-bar" id="btn-add-user1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-account-multiple-plus"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100 admin-only hiddennn">
+                  <button class="nav-link btn-buttom-bar" id="issue-page1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-notebook-edit-outline"></i>
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item w-100 admin-only hiddennn">
+                  <button class="nav-link btn-buttom-bar" id="return-p1">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-book-sync"></i>
+                    </span>
+                  </button>
+                </li>
+                
+
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+
+  <script type="module" src="/js/script.js"></script>
+
+</body>
+
+</html>
