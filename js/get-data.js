@@ -28,7 +28,7 @@ const UsersData = async function(){
             "X-Access-Key": "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK",
         },
     });
-    return await req.json();
+    return  req.json();
 
 } 
 users  = await UsersData();

@@ -47,11 +47,12 @@
 }
 .search-bar {
   top: 70px !important;
-  left: 244px !important;
+  /* left: 244px !important; */
 }
 .w-75 {
   width: 75% !important; }
-
+  .w-20 {
+    width: 20% !important; }
   .buttom-bar{
     display: none;
   }
