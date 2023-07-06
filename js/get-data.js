@@ -7,39 +7,63 @@ let books;
 
 
 // getting login data from server
-let req = new XMLHttpRequest();
+// let req = new XMLHttpRequest();
 
-req.onreadystatechange = () => {
-    if (req.readyState == XMLHttpRequest.DONE) {
-        users = req.responseText;
-    }
-};
+// req.onreadystatechange = () => {
+//     if (req.readyState == XMLHttpRequest.DONE) {
+//         users = req.responseText;
+//     }
+// };
 
-req.open("GET", "https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false ", true);
-req.setRequestHeader("X-Access-Key", "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK");
-req.send();
+// req.open("GET", "https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false ", true);
+// req.setRequestHeader("X-Access-Key", "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK");
+// req.send();
 
+const UsersData = async function(){
+    const req = await fetch("https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false " , {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            "X-Access-Key": "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK",
+        },
+    });
+    return await req.json();
 
+} 
+users = await UsersData();
 
 // getting books data from database\
-let reqe = new XMLHttpRequest();
-reqe.onreadystatechange = () => {
-    if (reqe.readyState == XMLHttpRequest.DONE) {
-        jBook = reqe.responseText;
-    }
-};
+const BookData = async function (){
+    const books = await fetch('https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false' ,{
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            "X-Access-Key": "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK",
+        }
+    } );
+    return books.json();
+}
+books = await BookData();
+console.log(books)
 
-reqe.open("GET", "https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false ", true);
-reqe.setRequestHeader("X-Access-Key", "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK");
-reqe.send();
+// let reqe = new XMLHttpRequest();
+// reqe.onreadystatechange = () => {
+//     if (reqe.readyState == XMLHttpRequest.DONE) {
+//         jBook = reqe.responseText;
+//     }
+// };
+
+// reqe.open("GET", "https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false ", true);
+// reqe.setRequestHeader("X-Access-Key", "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK");
+// reqe.send();
 
 
 
 
-setTimeout(function () {
-    books = JSON.parse(jBook);
-    users =JSON.parse(users);
-}, 5000);
+// setTimeout(function () {
+//     // books = JSON.parse(jBook);
+//     // // users =JSON.parse(users);
+// }, 5000);
 
 function hidAll(){
     document.getElementById('std-p').classList.add('hiddennn');

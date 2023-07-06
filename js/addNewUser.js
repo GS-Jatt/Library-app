@@ -45,9 +45,5 @@ userForm.addEventListener('submit', function (e) {
             "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
         },
     })
-        .then(res => res.json())
-        .then(data => console.log(data))
-
-
     e.preventDefault();
 });
