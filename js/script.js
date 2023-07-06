@@ -9,11 +9,12 @@ import { } from '/js/issueBook.js'
 import { } from '/js/issuedToUser.js'
 import { } from '/js/bookReturn.js'
 
+// import 'core-js';
+// import 'regenerator-runtime/runtime';
+
+
 
 // displaying books
-
-setTimeout(function () {
-
 const display = new Display().add;
 display(books);
     // let tableBody = document.getElementById('tableBody');
@@ -35,7 +36,7 @@ display(books);
     //         tableBody.innerHTML += uiString;
     //     }
     // }
-}, 5000);
+
 
 document.getElementById('books').addEventListener('click', function () {
     hidAll();

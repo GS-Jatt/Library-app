@@ -72,18 +72,26 @@ issueForm.addEventListener('submit', function (e) {
 
 
         // uploading issued details to database
-        let req = new XMLHttpRequest();
+        fetch('https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false ', {
+        method: 'PUT',
+        body: JSON.stringify(books),
+        headers: {
+            'Content-type': 'application/json',
+            "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
+        },
+    });
+        // let req = new XMLHttpRequest();
 
-        req.onreadystatechange = () => {
-            if (req.readyState == XMLHttpRequest.DONE) {
-                console.log(req.responseText);
-            }
-        };
+        // req.onreadystatechange = () => {
+        //     if (req.readyState == XMLHttpRequest.DONE) {
+        //         console.log(req.responseText);
+        //     }
+        // };
 
-        req.open("PUT", "https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false", true);
-        req.setRequestHeader("Content-Type", "application/json");
-        req.setRequestHeader("X-Access-Key", "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO");
-        req.send(JSON.stringify(books));
+        // req.open("PUT", "https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false", true);
+        // req.setRequestHeader("Content-Type", "application/json");
+        // req.setRequestHeader("X-Access-Key", "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO");
+        // req.send(JSON.stringify(books));
 
         fetch('https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false ', {
             method: 'PUT',

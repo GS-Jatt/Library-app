@@ -1,6 +1,7 @@
 'use strict'
 
 
+
 let users;
 let jBook;
 let books;
@@ -30,7 +31,7 @@ const UsersData = async function(){
     return await req.json();
 
 } 
-users = await UsersData();
+users  = await UsersData();
 
 // getting books data from database\
 const BookData = async function (){
@@ -43,8 +44,7 @@ const BookData = async function (){
     } );
     return books.json();
 }
-books = await BookData();
-console.log(books)
+ books =await BookData() ;
 
 // let reqe = new XMLHttpRequest();
 // reqe.onreadystatechange = () => {
