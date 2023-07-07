@@ -26,7 +26,7 @@
         <a class="sidebar-brand brand-logo" href="index.html"><img src="logo.png" alt="logo" /></a>
 
       </div> -->
-      <ul class="nav no-scroll" >
+      <ul class="nav no-scroll">
 
         <li class="nav-item nav-category">
           <span class="nav-link">Navigation</span>
@@ -42,7 +42,7 @@
         <li class="nav-item menu-items" id="std-only">
           <button class="nav-link btn-side-bar" id="dashboard-btn">
             <span class="menu-icon">
-              <i class="mdi mdi-view-dashboard logo-color" ></i>
+              <i class="mdi mdi-view-dashboard logo-color"></i>
             </span>
             <span class="menu-title "> Dashboard</span>
           </button>
@@ -97,7 +97,7 @@
       <!-- top bar-->
       <nav class="navbar p-0 fixed-top d-flex flex-row">
         <!-- logo  -->
-  
+
 
         <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
           <ul class="navbar-nav w-100">
@@ -126,7 +126,7 @@
               <span class="mdi mdi-logout text-danger" onclick="window.location.reload()"></span>
             </li>
             <li class="nav-item " id="login-logo">
-              <span class="mdi mdi-login "></span>
+              <a href="#"><span class="mdi mdi-login "></span></a>
 
             </li>
           </ul>
@@ -140,7 +140,7 @@
 
             <ul class="navbar-nav w-100">
               <li class="nav-item w-20">
-                
+
               </li>
               <li class="nav-item w-100">
                 <form class="nav-link  d-flex">
@@ -207,12 +207,12 @@
 
           <!-- login page -->
           <!-- <div id="login-p"> -->
-            <!-- <div class="row">
+          <!-- <div class="row">
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card"> -->
 
-                  <!-- first image -->
-                  <!-- <img src="l3.png" width="100%" alt="">
+          <!-- first image -->
+          <!-- <img src="l3.png" width="100%" alt="">
 
                 </div>
               </div>
@@ -240,7 +240,7 @@
 
 
 
-          
+
 
           <!-- student page -->
           <div class="row  " id="std-p">
@@ -271,36 +271,6 @@
             </div>
           </div>
 
-          <!-- login pop -->
-            <div class="card login-pop hiddennn">
-              <button class="btnnn">X</button>
-              <div class="card-body px-5 py-5">
-                <h3 class="card-title text-left mb-3">Login</h3>
-                <form id="subb">
-                  <div class="form-group">
-                    <label>User ID *</label>
-                    <input type="text" class="form-control p_input" id="user">
-                  </div>
-                  <div class="form-group">
-                    <label>Password *</label>
-                    <input type="text" class="form-control p_input" id="passwd">
-                    <p id="check-user"></p>
-                  </div>
-
-                  <div class="form-group d-flex align-items-center justify-content-between">
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input"> Remember me </label>
-                    </div>
-                    <a href="#" class="forgot-pass">Forgot password</a>
-                  </div>
-
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-block enter-btn" >Login</button>
-                  </div>
-                </form>
-              </div>
-            </div>
 
 
           <!-- add new book -->
@@ -361,7 +331,8 @@
                     </div>
                     <div class="form-group">
                       <label for="passwd">password</label>
-                      <input type="password" class="form-control" id="passwd3" placeholder="password" required="required">
+                      <input type="password" class="form-control" id="passwd3" placeholder="password"
+                        required="required">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
 
@@ -534,7 +505,7 @@
                           </tr>
                         </thead>
                         <tbody id="return-tableBody">
-  
+
                         </tbody>
                       </table>
                     </div>
@@ -612,7 +583,7 @@
                     </span>
                   </button>
                 </li>
-                
+
 
 
               </ul>
@@ -624,6 +595,38 @@
       <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
+
+    <!-- login pop -->
+    <div class="card login-pop hiddennn">
+      <button class="btnnn">X</button>
+      <div class="card-body px-5 py-5">
+        <h3 class="card-title text-left mb-3">Login</h3>
+        <form id="subb">
+          <div class="form-group">
+            <label>User ID *</label>
+            <input type="text" class="form-control p_input" id="user">
+          </div>
+          <div class="form-group">
+            <label>Password *</label>
+            <input type="text" class="form-control p_input" id="passwd">
+            <p id="check-user"></p>
+          </div>
+
+          <div class="form-group d-flex align-items-center justify-content-between">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input"> Remember me </label>
+            </div>
+            <a href="#" class="forgot-pass">Forgot password</a>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
   </div>
 
   <script type="module" src="/js/script.js"></script>

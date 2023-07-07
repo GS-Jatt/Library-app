@@ -23,6 +23,9 @@
   margin-left: 35% ;
   margin-top: 0px;
 }
+.blur {
+  filter: blur(5px);
+}
 
 .btnnn {
   position: absolute;

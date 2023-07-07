@@ -20,6 +20,23 @@ let books;
 // req.setRequestHeader("X-Access-Key", "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK");
 // req.send();
 
+
+
+// getting books data from database\
+
+const BookData = async function (){
+    const books = await fetch('https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false' ,{
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            "X-Access-Key": "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK",
+        }
+    } );
+    return books.json();
+}
+ books =await BookData() ;
+
+// getting user data from database
 const UsersData = async function(){
     const req = await fetch("https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false " , {
         method: 'GET',
@@ -33,18 +50,6 @@ const UsersData = async function(){
 } 
 users  = await UsersData();
 
-// getting books data from database\
-const BookData = async function (){
-    const books = await fetch('https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false' ,{
-        method: 'GET',
-        headers: {
-            'Content-type': 'application/json',
-            "X-Access-Key": "$2b$10$vVrdTC03qN6B66LyKf/0J.yZGnHCjlof.xcPgr7nNPgwKL4Z5AevK",
-        }
-    } );
-    return books.json();
-}
- books =await BookData() ;
 
 // let reqe = new XMLHttpRequest();
 // reqe.onreadystatechange = () => {
@@ -65,6 +70,7 @@ const BookData = async function (){
 //     // // users =JSON.parse(users);
 // }, 5000);
 
+// hiding all froms in app  
 function hidAll(){
     document.getElementById('std-p').classList.add('hiddennn');
     document.getElementById('add-new-book-form').classList.add('hiddennn');
