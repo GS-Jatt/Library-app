@@ -61,7 +61,7 @@ const afterLogin = function () {
 }
 
 /**
- * eventheandler for login 
+ * event heandler for login 
  */
 document.querySelector("#subb").addEventListener("submit", function (e) {
     const user = document.querySelector("#user").value;

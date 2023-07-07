@@ -13,7 +13,10 @@ document.getElementById('btn-add-book1').addEventListener('click', function(){
     document.getElementById('add-new-book-form').classList.toggle('hiddennn');
 });
 
-
+/**
+ * 
+ * upload new books to database
+ */
 const PutBooks = async function(){
     return fetch("https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false", {
          method: 'PUT',
@@ -26,7 +29,7 @@ const PutBooks = async function(){
  }
 
 
-// Add submit event listener to add new book
+// submit event listener for add new book
 let libraryForm = document.getElementById('add-book-form');
 libraryForm.addEventListener('submit', libraryFormSubmit);
 
@@ -40,10 +43,10 @@ function libraryFormSubmit(e) {
     let lockerNo = document.getElementById('locker-no').value;
 
 
-    let book = new Book(id, name, author, publisher, type, lockerNo);
+    const book = new Book(id, name, author, publisher, type, lockerNo);
     books.push(book);
 
-    let display = new Display();
+    const display = new Display();
 
     if (display.validate(book)) {
 
@@ -69,7 +72,7 @@ function libraryFormSubmit(e) {
         // req.send(JSON.stringify(books));
 
 
-        display.show('success', 'Your book has been successfully added')
+        display.show('success', 'Your book has been successfully added');
     }
     else {
         // Show error to the user

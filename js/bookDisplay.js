@@ -1,7 +1,7 @@
 'use strict'
 import { books, users } from "./get-data.js";
 
-// lib script 
+
 class Book {
     constructor(id, name, author, publisher, type, lockerNo) {
         this.id = id;
@@ -17,6 +17,11 @@ class Book {
 
 // class to display new add book
 class Display {
+    /**
+     * 
+     * @param {take book object } books 
+     * display books on page
+     */
     add(books) {
         let tableBody = document.getElementById('tableBody');
         for (const book of books) {
@@ -50,6 +55,11 @@ class Display {
         //                   </tr>`;
         // tableBody.innerHTML += uiString;
     }
+    /**
+     * 
+     * add issued book to page 
+     * @param { object } book
+     */
     issue(book) {
         let user;
         for (const userr of users.users) {
@@ -68,6 +78,10 @@ class Display {
                           </tr>`;
         tableBody.innerHTML += uiString;
     }
+
+    /**
+     * add issued books to users dashboard
+     */
     dashboard(user) {
 
         for (const id of user.issueBooksId) {
@@ -85,12 +99,19 @@ class Display {
             }
         }
     }
-
+/**
+ * clear the add book form
+ */
     clear() {
         let libraryForm = document.getElementById('add-book-form');
         libraryForm.reset();
     }
 
+    /**
+     * validate the book which to add in library
+     * @param {object} book
+     * @returns 
+     */
     validate(book) {
         if (book.name.length < 2 || book.author.length < 2) {
             return false
@@ -101,23 +122,23 @@ class Display {
     }
 
     show(type, displayMessage) {
-        // let message = document.getElementById('message');
-        // let boldText;
-        // if (type === 'success') {
-        //     boldText = 'Success';
-        // }
-        // else {
-        //     boldText = 'Error!';
-        // }
-        // message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
-        //                         <strong>${boldText}:</strong> ${displayMessage}
-        //                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        //                         <span aria-hidden="true">×</span>
-        //                         </button>
-        //                     </div>`;
-        // setTimeout(function () {
-        //     message.innerHTML = ''
-        // }, 5000);
+        let message = document.getElementById('message');
+        let boldText;
+        if (type === 'success') {
+            boldText = 'Success';
+        }
+        else {
+            boldText = 'Error!';
+        }
+        message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                                <strong>${boldText}:</strong> ${displayMessage}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                                </button>
+                            </div>`;
+        setTimeout(function () {
+            message.innerHTML = ''
+        }, 5000);
 
     }
 }

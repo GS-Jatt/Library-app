@@ -1,5 +1,6 @@
 'use strict'
  import { users, hidAll } from "/js/get-data.js";
+
 // add new user function
 document.getElementById('btn-add-user').addEventListener('click', function(){
     hidAll();
@@ -11,7 +12,7 @@ document.getElementById('btn-add-user1').addEventListener('click', function(){
     document.getElementById('add-new-user-form').classList.toggle('hiddennn');
 });
 
-
+// add  new user form 
 const userForm = document.getElementById('add-user-form');
 
 userForm.addEventListener('submit', function (e) {
@@ -19,6 +20,7 @@ userForm.addEventListener('submit', function (e) {
     const name = document.getElementById('userName').value;
     const passwd = document.getElementById('passwd3').value;
 
+    // object to store user details
     const newUser = {
         id: users.admin.users + 1,
         name: name,
@@ -32,7 +34,7 @@ userForm.addEventListener('submit', function (e) {
     users.admin.users++;
     alert(`Remember this User ID and Password \n ID => ${newUser.id} \n Password => ${newUser.passwd}`);
 
-    let libraryForm = document.getElementById('add-user-form');
+    const libraryForm = document.getElementById('add-user-form');
         libraryForm.reset();
 
     // uploading new user data on database
