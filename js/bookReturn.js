@@ -4,6 +4,7 @@ import { books, users, hidAll } from "/js/get-data.js";
 
 const tableBody = document.getElementById('return-tableBody');
 
+// manu buttons
 document.getElementById('return-p').addEventListener('click', function () {
     hidAll();
     document.getElementById('return-page').classList.toggle('hiddennn');

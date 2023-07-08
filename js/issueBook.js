@@ -3,10 +3,11 @@ import { Display } from "/js/bookDisplay.js";
 
 const userDetails = document.getElementById('issue-user-tableBody');
 const bookDetails = document.getElementById('issue-book-tableBody');
+
 let indexOfUser, indexOfBook, userId, bookId, checker1 = 0, checker2 = 0;
 
 
-
+// manu buttons
 document.getElementById('issue-page').addEventListener('click', function () {
     hidAll()
     document.getElementById('issue-book-user-form').classList.toggle('hiddennn');
@@ -16,6 +17,7 @@ document.getElementById('issue-page1').addEventListener('click', function () {
     hidAll()
     document.getElementById('issue-book-user-form').classList.toggle('hiddennn');
 })
+
 
 document.getElementById('user-id').addEventListener('change', function (e) {
 
@@ -73,13 +75,13 @@ issueForm.addEventListener('submit', function (e) {
 
         // uploading issued details to database
         fetch('https://api.jsonbin.io/v3/b/64081c59c0e7653a058439f8?meta=false ', {
-        method: 'PUT',
-        body: JSON.stringify(books),
-        headers: {
-            'Content-type': 'application/json',
-            "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
-        },
-    });
+            method: 'PUT',
+            body: JSON.stringify(books),
+            headers: {
+                'Content-type': 'application/json',
+                "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
+            },
+        });
         // let req = new XMLHttpRequest();
 
         // req.onreadystatechange = () => {

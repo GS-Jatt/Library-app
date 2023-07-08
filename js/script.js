@@ -56,6 +56,7 @@ document.getElementById('dashboard-btn').addEventListener('click', function () {
     hidAll();
     document.getElementById('user-dashboard').classList.remove('hiddennn');
 });
+
 document.getElementById('std-only1').addEventListener('click', function () {
     hidAll();
     document.getElementById('user-dashboard').classList.remove('hiddennn');

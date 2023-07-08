@@ -13,12 +13,14 @@ const dashboard = new Display().dashboard;
 //     document.querySelector(".login-pop").classList.toggle("hiddennn");
 // });
 
+//  showing login form once
 setTimeout(() => {
     if (checker) {
         document.querySelector(".login-pop").classList.remove("hiddennn");
         document.querySelector(".page-body-wrapper").classList.add("blur");
     }
 }, 4000);
+
 
 document.querySelector("#login-logo").addEventListener("click", function () {
     document.querySelector(".login-pop").classList.toggle("hiddennn");
