@@ -1,4 +1,5 @@
 'use strict'
+import { savedLogin } from "/js/login.js";
 
 
 
@@ -50,6 +51,9 @@ const UsersData = async function(){
 } 
 users  = await UsersData();
 
+if(localStorage.getItem('loginDetails')){
+   savedLogin();
+ }
 
 // let reqe = new XMLHttpRequest();
 // reqe.onreadystatechange = () => {

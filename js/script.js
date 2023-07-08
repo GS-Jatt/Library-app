@@ -62,4 +62,7 @@ document.getElementById('std-only1').addEventListener('click', function () {
     document.getElementById('user-dashboard').classList.remove('hiddennn');
 });
 
-
+document.getElementById('user-logo').addEventListener('click', function () {
+    localStorage.removeItem('loginDetails');
+    window.location.reload();
+})
