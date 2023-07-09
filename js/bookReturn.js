@@ -1,5 +1,6 @@
 'use strict'
 import { books, users, hidAll } from "/js/get-data.js";
+import { Display } from "/js/bookDisplay.js";
 
 
 const tableBody = document.getElementById('return-tableBody');
@@ -82,7 +83,12 @@ document.getElementById('return-book-form').addEventListener('submit', function 
             "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
         },
     });
+    const display = new Display().add;
 
     document.getElementById('return-book-form').reset();
+    document.getElementById('tableBody').innerHTML = '';
+    document.getElementById('issued-tableBody').innerHTML= '';
+    display(books);
+    
     e.preventDefault();
 });

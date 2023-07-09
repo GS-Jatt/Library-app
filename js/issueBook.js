@@ -65,6 +65,7 @@ document.getElementById('book-id').addEventListener('change', function (e) {
 // issuing book to user
 const issueForm = document.getElementById('issue-book-form');
 issueForm.addEventListener('submit', function (e) {
+    const display = new Display().add;
     if (checker1 + checker2 === 2) {
         users.users[indexOfUser].issueBooksId.push(bookId);
         books[indexOfBook].issuedTo = userId;
@@ -113,5 +114,8 @@ issueForm.addEventListener('submit', function (e) {
     issueForm.reset();
     bookDetails.innerHTML = '';
     userDetails.innerHTML = '';
+    document.getElementById('tableBody').innerHTML = '';
+    document.getElementById('issued-tableBody').innerHTML= '';
+    display(books);
     e.preventDefault();
 });
