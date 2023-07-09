@@ -86,6 +86,7 @@ document.querySelector("#subb").addEventListener("submit", function (e) {
         hid();
         afterLogin();
         userdataStore(user, password);
+        document.querySelector("#subb").reset();
         // document.getElementById("search-bar").classList.toggle("hiddennn");
     }
     else {
@@ -98,6 +99,8 @@ document.querySelector("#subb").addEventListener("submit", function (e) {
                 hid();
                 afterLogin();
                 userdataStore(user, password);
+                document.querySelector("#subb").reset();
+
 
                 // document.getElementById("search-bar").classList.toggle("hiddennn");
             }
@@ -143,6 +146,8 @@ const savedLogin = function(){
             }
         }
     }
+    document.querySelector("#subb").reset();
+
 }
 
 
