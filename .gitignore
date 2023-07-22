@@ -1,5 +1,6 @@
 node_modules
 dist
+assets
 .vscode
-.parcel-cache
-.DS_Store
+./parcel-cache
+./DS_Store
