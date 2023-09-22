@@ -3,4 +3,4 @@ dist
 /assets
 .vscode
 .DS_Store
-.parcel-cache
+.parcel-cache  
