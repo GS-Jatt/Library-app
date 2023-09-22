@@ -3729,7 +3729,7 @@
 93/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/package-manager/lib/types.d.ts1688625995017425200 0
 128/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/transformer-react-refresh-wrap/src/ReactRefreshWrapTransformer.js1688625993901418500 0
 93/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/packager-js/lib/DevPackager.js1688625993725417400 0
-54/mnt/sdb2/Programs/JavaScript/Libaray app/package.json1688635896601377400 0
+54/mnt/sdb2/Programs/JavaScript/Libaray app/package.json1695390076752992200 0
 78/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/escalade/sync/index.mjs1688625993705417300 0
 123/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/css-select/lib/attributes.js1688625993653417000 0
 107/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/LICENSE1688625993417415600 0
@@ -4041,7 +4041,7 @@
 77/mnt/sdb2/Programs/JavaScript/Libaray app/assets/images/carousel/banner_9.jpg1605791551000000000 0
 90/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/proposals/string-padding.js1688635732811680500 0
 95/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/features/object/lookup-setter.js1688635732127673400 0
-59/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc1688635896477376200 1
+59/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc1695390163541441800 1
 107/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/runtime-js/src/helpers/worker/wasm-loader.js1688625994597422700 0
 107/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/features/css-background-offsets.js1688625995261426700 0
 127/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/plugins/convertTransform.js1688625994381421400 0
@@ -4362,7 +4362,7 @@
 108/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64/index.js1688625993349415200 0
 106/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/core/test/fixtures/main-global/package.json1688625995793429900 0
 93/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/transformer-babel/src/utils.js1688625994165420100 0
-72/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@msgpackr-extract1688635896477376200 1
+72/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@msgpackr-extract1695390163541392100 1
 79/mnt/sdb2/Programs/JavaScript/Libaray app/assets/images/faces-clipart/pic-2.png1605791551000000000 0
 117/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/lib/svgo/jsAPI.js1688625994521422200 0
 115/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/csso/node_modules/css-tree/lib/syntax/function/expression.js1688625995533428300 0
@@ -4573,7 +4573,7 @@
 121/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/removeMetadata.js1688625994817424000 0
 82/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/domutils/lib/traversal.d.ts1688625994253420600 0
 80/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/number/virtual1688635732987682400 1
-60/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@lmdb1688635896477376200 1
+60/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@lmdb1695390163541742500 1
 116/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/index.js1688625995137425900 0
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/regions/MO.js1688625996001431100 0
 85/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/typed-array/sort.js1688635732719679600 0
@@ -5440,7 +5440,7 @@
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/internals/math-trunc.js1688635732207674300 0
 92/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/typed-array/uint8-array.js1688635733267685300 0
 108/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/transformer-js/parcel-swc.win32-x64-msvc.node1688625996869436300 0
-49/mnt/sdb2/Programs/JavaScript/Libaray app/new.css1688733708045906700 0
+49/mnt/sdb2/Programs/JavaScript/Libaray app/new.css1695390320012268300 0
 74/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/path-type/readme.md1688625993525416200 0
 87/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc/helpers/src/_instanceof.mjs1688625996069431500 0
 75/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/lightningcss/LICENSE1688625993417415600 0
@@ -5549,7 +5549,7 @@
 103/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc/helpers/src/_class_apply_descriptor_set.mjs1688625996033431300 0
 58/mnt/sdb2/Programs/JavaScript/Libaray app/js/addNewBook.js1688733887791363600 0
 91/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/css-tree/lib/lexer/generic-urange.js1688625995545428400 0
-52/mnt/sdb2/Programs/JavaScript/Libaray app/.gitignore1695359086398117000 0
+52/mnt/sdb2/Programs/JavaScript/Libaray app/.gitignore1695390089614181000 0
 128/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/node/Value.js1688625995405427500 0
 74/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/type-fest/base.d.ts1688625993713417400 0
 112/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/package.json1688625995417427600 0
@@ -5808,7 +5808,7 @@
 113/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-htmlnano/node_modules/mdn-data/README.md1688625994549422400 0
 89/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-swc/package.json1688625993581416600 0
 83/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/features/set/some.js1688635732699679400 0
-62/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel1688635896477376200 1
+62/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel1695390163540981800 1
 88/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/array/virtual/index.js1688635731299664900 0
 91/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/core/test/fixtures/bundle.js1688625994865424300 0
 85/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/core/lib/Validation.js1688625995669429100 0
@@ -6413,7 +6413,7 @@
 87/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/semver/internal/parse-options.js1688625994305420900 0
 128/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax/pseudo/slotted.js1688625995353427200 0
 81/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/csso/node_modules/mdn-data1688625994605422700 1
-52/mnt/sdb2/Programs/JavaScript/Libaray app/index.html1695100540221210000 0
+52/mnt/sdb2/Programs/JavaScript/Libaray app/index.html1695389312399264300 0
 103/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/css-select/node_modules/entities/lib/decode.d.ts1688625994857424200 0
 89/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/typed-array/for-each.js1688635730931661000 0
 102/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/features/custom-elementsv1.js1688625995669429100 0
@@ -7251,7 +7251,7 @@
 74/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/function1688635732243674700 1
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/es/error/constructor.js1688635729723648500 0
 90/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc/helpers/_/_to_consumable_array1688625995977431000 1
-59/mnt/sdb2/Programs/JavaScript/Libaray app/package-lock.json1688635896597377400 0
+59/mnt/sdb2/Programs/JavaScript/Libaray app/package-lock.json1695390163610077900 0
 94/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/actual/array/virtual/reverse.js1688635732499677300 0
 78/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@parcel/packager-js/lib1688625994217420400 1
 103/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/@swc/helpers/_/_to_consumable_array/package.json1688625995981431000 0
@@ -7579,7 +7579,7 @@
 88/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/modules/es.regexp.test.js1688635730451656100 0
 94/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/modules/es.date.to-primitive.js1688635730323654700 0
 89/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/full/array/virtual/flat.js1688635730875660500 0
-73/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/.package-lock.json1688635896669378100 0
+73/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/.package-lock.json1695390163653223100 0
 91/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/actual/array-buffer/index.js1688635731243664300 0
 99/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/features/css-gencontent.js1688625995401427500 0
 85/mnt/sdb2/Programs/JavaScript/Libaray app/assets/images/file-icons/256/007-folder.png1605791551000000000 0
@@ -8238,7 +8238,7 @@
 98/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/core-js/features/instance/is-well-formed.js1688635731863670700 0
 77/mnt/sdb2/Programs/JavaScript/Libaray app/assets/images/samples/300x300/3.jpg1605791551000000000 0
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/regions/LT.js1688625995973431000 0
-54/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules1688635896477376200 1
+54/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules1695390163540954200 1
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/regions/LV.js1688625995973431000 0
 92/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/features/outline.js1688625996061431500 0
 86/mnt/sdb2/Programs/JavaScript/Libaray app/node_modules/caniuse-lite/data/regions/MA.js1688625995973431000 0

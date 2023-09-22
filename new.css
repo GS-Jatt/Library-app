@@ -7,7 +7,7 @@
 .issue-details {
   width: 50%;
 
-  @media(max-width: 764px) {
+  @media (max-width: 764px) {
     width: 100%;
   }
 
@@ -29,6 +29,7 @@
 }
 
 .search-icon {
+  display: flex;
   position: relative;
   width: 100%;
   min-width: 150px !important;
@@ -44,10 +45,11 @@
     font-size: 30px !important;
   }
 
-  & button {
+  & #search {
+    width: 10px !important;
     position: absolute;
     top: -2px;
-    right: -60px;
+    right: 24px;
   }
 }
 

@@ -5,7 +5,9 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist",
+    "dev": "vite",
+    "build2": "vite build"
   },
   "author": "Gurneet singh",
   "license": "ISC",
@@ -15,6 +17,7 @@
   },
   "dependencies": {
     "core-js": "^3.31.1",
-    "regenerator-runtime": "^0.13.11"
+    "regenerator-runtime": "^0.13.11",
+    "vite": "^4.4.9"
   }
 }
