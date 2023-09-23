@@ -6,11 +6,12 @@
 
 .issue-details {
   width: 50%;
+}
 
-  @media (max-width: 764px) {
+@media (max-width: 764px) {
+  .issue-details {
     width: 100%;
   }
-
 }
 
 
@@ -35,23 +36,28 @@
   min-width: 150px !important;
   margin-left: -40px;
 
-  & input {
-    width: 100% !important;
 
-  }
-
-  & i {
-    color: #050404;
-    font-size: 30px !important;
-  }
-
-  & #search {
-    width: 10px !important;
-    position: absolute;
-    top: -2px;
-    right: 24px;
-  }
 }
+
+.search-icon input {
+  width: 100% !important;
+
+}
+
+.search-icon i {
+  color: #050404;
+  font-size: 30px !important;
+}
+
+.search-icon #search {
+  width: 10px !important;
+  position: absolute;
+  top: -2px;
+  right: 24px;
+}
+
+
+
 
 .max-w {
   width: 50% !important;
@@ -671,16 +677,18 @@ input[type="button"].btn-block {
 .dropdown {
   position: relative;
 
-  & button {
-    border-radius: 8px;
+
+}
+
+.dropdown button {
+  border-radius: 8px;
 
 
-  }
+}
 
-  & .mdi-tune {
-    font-size: 24px !important;
-    color: #8692a7;
-  }
+.dropdown .mdi-tune {
+  font-size: 24px !important;
+  color: #8692a7;
 }
 
 .dropdown-toggle {
