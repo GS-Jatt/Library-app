@@ -47,15 +47,18 @@ document.getElementById('return-book-id').addEventListener('change', function (e
 document.getElementById('return-book-form').addEventListener('submit', function (e) {
     rBook.issuedDate = 0;
     rBook.issuedTo = 0;
-    loop1:
-    for (const user of users.users) {
-        for (let [index, issueBooksId] of user.issueBooksId.entries()) {
-            if (issueBooksId === String(rBook.id)) {
-                user.issueBooksId.splice(index, 1);
-                break loop1;
-            }
-        }
-    }
+    rUser.issueBooksId = rUser.issueBooksId.filter((id) => id !== rBook.id);
+
+
+    // loop1:
+    // for (const user of users.users) {
+    //     for (let [index, issueBooksId] of user.issueBooksId.entries()) {
+    //         if (issueBooksId === String(rBook.id)) {
+    //             user.issueBooksId.splice(index, 1);
+    //             break loop1;
+    //         }
+    //     }
+    // }
 
     // let req = new XMLHttpRequest();
 
@@ -77,6 +80,8 @@ document.getElementById('return-book-form').addEventListener('submit', function 
             "X-Access-Key": "$2b$10$yCt1TczM9drUVreBsiuKjubH1z/W5ZkloK7Aj/NQFxAbBiqWNN8OO",
         },
     });
+
+    console.log(users, rUser);
 
     fetch('https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false ', {
         method: 'PUT',
