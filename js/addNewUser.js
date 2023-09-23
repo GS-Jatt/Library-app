@@ -1,13 +1,15 @@
 'use strict'
- import { users, hidAll } from "/js/get-data.js";
+import { users, hidAll } from "/js/get-data.js";
+import { Display } from "/js/bookDisplay.js";
 
+const display = new Display();
 // add new user function
-document.getElementById('btn-add-user').addEventListener('click', function(){
+document.getElementById('btn-add-user').addEventListener('click', function () {
     hidAll();
     document.getElementById('add-new-user-form').classList.toggle('hiddennn');
 });
 
-document.getElementById('btn-add-user1').addEventListener('click', function(){
+document.getElementById('btn-add-user1').addEventListener('click', function () {
     hidAll();
     document.getElementById('add-new-user-form').classList.toggle('hiddennn');
 });
@@ -26,16 +28,17 @@ userForm.addEventListener('submit', function (e) {
         name: name,
         class: className,
         passwd: passwd,
-        issueBooksId:[],
+        issueBooksId: [],
     };
 
 
     users.users.push(newUser);
     users.admin.users++;
     alert(`Remember this User ID and Password \n ID => ${newUser.id} \n Password => ${newUser.passwd}`);
+    display.show('success', 'New user has been successfully added');
 
     const libraryForm = document.getElementById('add-user-form');
-        libraryForm.reset();
+    libraryForm.reset();
 
     // uploading new user data on database
 

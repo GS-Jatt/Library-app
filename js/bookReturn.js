@@ -18,6 +18,7 @@ document.getElementById('return-p1').addEventListener('click', function () {
 let rBook;
 let rUser;
 document.getElementById('return-book-id').addEventListener('change', function (e) {
+
     loop1:
     for (let book of books) {
         if (book.id === Number(e.target.value)) {
@@ -39,6 +40,8 @@ document.getElementById('return-book-id').addEventListener('change', function (e
     <td> ${rBook.lockerNo} </td>
     <!-- <td> other book option </td> -->
   </tr>`;
+
+
 });
 
 document.getElementById('return-book-form').addEventListener('submit', function (e) {
@@ -86,9 +89,9 @@ document.getElementById('return-book-form').addEventListener('submit', function 
     const display = new Display().add;
 
     document.getElementById('return-book-form').reset();
-    document.getElementById('tableBody').innerHTML = '';
-    document.getElementById('issued-tableBody').innerHTML= '';
+    tableBody.innerHTML = '';
+    document.getElementById('issued-tableBody').innerHTML = '';
     display(books);
-    
+
     e.preventDefault();
 });
