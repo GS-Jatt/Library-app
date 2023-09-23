@@ -86,11 +86,34 @@
 
 .login-pop {
   position: absolute !important;
-  top: 15% !important;
   /* left: 35% !important; */
+  /* margin-top: 0px */
+  /* /* margin-left: 35%; */
+  /* z-index: 9998 !important; */
+  top: 50%;
+  /* justify-content: center !important;
+  align-items: center !important; */
+}
+
+.login-container {
+  width: 100%;
+  height: 100%;
+
+}
+
+.login-container .card {
   background-color: rgba(2, 10, 22, 0.856) !important;
-  margin-left: 35%;
-  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 780px;
+  z-index: 9999 !important;
+}
+
+@media (min-Width:780px) {
+  .login-container .card {
+
+    margin: auto;
+  }
 }
 
 .blur {
@@ -183,6 +206,7 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #6c7293;
 }
 
 *,
@@ -1586,8 +1610,8 @@ html {
   color: #ffffff;
 
   width: 100%;
-  height: 95px;
-  margin-left: px;
+  height: 70px;
+  margin-left: 0px;
 }
 
 @media (max-width: 991px) {
