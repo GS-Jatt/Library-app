@@ -81,7 +81,7 @@ document.getElementById('return-book-form').addEventListener('submit', function 
         },
     });
 
-    console.log(users, rUser);
+
 
     fetch('https://api.jsonbin.io/v3/b/64030be9ace6f33a22e92074?meta=false ', {
         method: 'PUT',
