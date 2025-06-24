@@ -1,7 +1,7 @@
 'use strick'
 
-import { Book, Display } from "/js/bookDisplay.js";
-import { books,hidAll } from "/js/get-data.js";
+import { Book, Display } from "./bookDisplay.js";
+import { books,hidAll } from "./get-data.js";
 
 document.getElementById('btn-add-book').addEventListener('click', function(){
     hidAll();
@@ -14,7 +14,7 @@ document.getElementById('btn-add-book1').addEventListener('click', function(){
 });
 
 /**
- * 
+ *
  * upload new books to database
  */
 const PutBooks = async function(){
@@ -54,9 +54,9 @@ function libraryFormSubmit(e) {
         display.clear();
 
         // uploading new book to database
-       
+
         PutBooks();
-        
+
 
         // let req = new XMLHttpRequest();
 
