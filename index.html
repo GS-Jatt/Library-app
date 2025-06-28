@@ -36,61 +36,74 @@
         </div>
         <ul class="nav no-scroll sidebar-navv">
           <li class="nav-item menu-items">
-            <button class="nav-link btn-side-bar" id="books">
-              <span class="menu-icon">
-                <i class="mdi mdi-bookshelf logo-color"></i>
-              </span>
-              <span class="menu-title"> Books</span>
-            </button>
+            <a href="#books">
+              <button class="nav-link btn-side-bar" id="books">
+                <span class="menu-icon">
+                  <i class="mdi mdi-bookshelf logo-color"></i>
+                </span>
+                <span class="menu-title"> Books</span>
+              </button>
+            </a>
           </li>
           <li class="nav-item menu-items" id="std-only">
-            <button class="nav-link btn-side-bar" id="dashboard-btn">
-              <span class="menu-icon">
-                <i class="mdi mdi-view-dashboard logo-color"></i>
-              </span>
-              <span class="menu-title"> Dashboard</span>
-            </button>
+            <a href="#dashboard-btn">
+              <button class="nav-link btn-side-bar" id="dashboard-btn">
+                <span class="menu-icon">
+                  <i class="mdi mdi-view-dashboard logo-color"></i>
+                </span>
+                <span class="menu-title"> Dashboard</span>
+              </button>
+            </a>
           </li>
           <li class="nav-item menu-items admin-only hiddennn">
-            <button class="nav-link btn-side-bar" id="issued-to-user-btn">
-              <span class="menu-icon">
-                <i class="mdi mdi-book-check logo-color"></i>
-              </span>
-              <span class="menu-title"> Issued Books</span>
-            </button>
-          </li>
-
-          <li class="nav-item menu-items admin-only hiddennn">
-            <button class="nav-link btn-side-bar" id="btn-add-book">
-              <span class="menu-icon">
-                <i class="mdi mdi-book-plus-multiple-outline logo-color"></i>
-              </span>
-              <span class="menu-title"> Add new book</span>
-            </button>
+            <a href="#issued-to-user-btn">
+              <button class="nav-link btn-side-bar" id="issued-to-user-btn">
+                <span class="menu-icon">
+                  <i class="mdi mdi-book-check logo-color"></i>
+                </span>
+                <span class="menu-title"> Issued Books</span>
+              </button>
+            </a>
           </li>
           <li class="nav-item menu-items admin-only hiddennn">
-            <button class="nav-link btn-side-bar" id="btn-add-user">
-              <span class="menu-icon">
-                <i class="mdi mdi-account-multiple-plus logo-color"></i>
-              </span>
-              <span class="menu-title"> Add new user</span>
-            </button>
+            <a href="#btn-add-book">
+              <button class="nav-link btn-side-bar" id="btn-add-book">
+                <span class="menu-icon">
+                  <i class="mdi mdi-book-plus-multiple-outline logo-color"></i>
+                </span>
+                <span class="menu-title"> Add new book</span>
+              </button>
+            </a>
           </li>
           <li class="nav-item menu-items admin-only hiddennn">
-            <button class="nav-link btn-side-bar" id="issue-page">
-              <span class="menu-icon">
-                <i class="mdi mdi-notebook-edit-outline logo-color"></i>
-              </span>
-              <span class="menu-title"> Issue book</span>
-            </button>
+            <a href="#btn-add-user">
+              <button class="nav-link btn-side-bar" id="btn-add-user">
+                <span class="menu-icon">
+                  <i class="mdi mdi-account-multiple-plus logo-color"></i>
+                </span>
+                <span class="menu-title"> Add new user</span>
+              </button>
+            </a>
           </li>
           <li class="nav-item menu-items admin-only hiddennn">
-            <button class="nav-link btn-side-bar" id="return-p">
-              <span class="menu-icon">
-                <i class="mdi mdi-book-sync logo-color"></i>
-              </span>
-              <span class="menu-title">Book return</span>
-            </button>
+            <a href="#issue-page">
+              <button class="nav-link btn-side-bar" id="issue-page">
+                <span class="menu-icon">
+                  <i class="mdi mdi-notebook-edit-outline logo-color"></i>
+                </span>
+                <span class="menu-title"> Issue book</span>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item menu-items admin-only hiddennn">
+            <a href="#return-p">
+              <button class="nav-link btn-side-bar" id="return-p">
+                <span class="menu-icon">
+                  <i class="mdi mdi-book-sync logo-color"></i>
+                </span>
+                <span class="menu-title">Book return</span>
+              </button>
+            </a>
           </li>
         </ul>
       </nav>
@@ -105,7 +118,7 @@
               <li class="nav-item">
                 <a class="sidebar-brand brand-logo" href="index.html"
                   ><img
-                    height="63px"
+                    height="45px"
                     src="logo.png"
                     alt="logo"
                     style="z-index: 999999"
@@ -207,11 +220,11 @@
                 </form>
               </li>
 
-              <li class="nav-item hiddennn" id="user-logo">
+              <li class="nav-item hiddennn pointer" id="user-logo">
                 <span class="mdi mdi-logout text-danger"></span>
               </li>
-              <li class="nav-item" id="login-logo">
-                <a href="#"><span class="mdi mdi-login"></span></a>
+              <li class="nav-item pointer" id="login-logo">
+                <span class="mdi mdi-login"></span>
               </li>
             </ul>
 
@@ -369,7 +382,7 @@
 
             <!-- add new book -->
             <div id="add-new-book-form" class="hiddennn">
-              <div class="col-md-6 grid-margin stretch-card">
+              <div class="grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add new Book form</h4>
@@ -445,7 +458,7 @@
 
             <!-- add new user -->
             <div id="add-new-user-form" class="hiddennn">
-              <div class="col-md-6 grid-margin stretch-card">
+              <div class="grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add new User form</h4>
@@ -668,7 +681,6 @@
                 </div>
               </div>
             </div>
-            <div id="message"></div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
@@ -682,64 +694,104 @@
               >
             </div>
           </footer>
-          <!-- buttom bar -->
+          <div id="message"></div>
+          <!-- bottom bar -->
           <div class="buttom-bar hiddennn" id="buttom-bar">
             <nav class="navbar p-0 fixed-bottom d-flex flex-row shodow">
               <div
-                class="navbar-menu-wrapper flex-grow d-flex align-items-stretch w-100"
+                class="navbar-menu-wrapper flex-grow d-flex align-items-stretch w-100 h-40"
               >
-                <ul class="navbar-nav w-100">
-                  <li class="nav-item w-100">
-                    <button class="nav-link btn-buttom-bar" id="books1">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-bookshelf"></i>
-                      </span>
-                    </button>
+                <ul
+                  class="navbar-nav w-100 d-flex justify-content-around align-items-center p-0"
+                >
+                  <li class="nav-item">
+                    <a href="#books">
+                      <button
+                        class="nav-link btn-buttom-bar active1"
+                        id="books1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-bookshelf"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100" id="std-only1">
-                    <button class="nav-link btn-buttom-bar">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-view-dashboard"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item" id="std-only1">
+                    <a href="#std-only">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-view-dashboard"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100 admin-only hiddennn">
-                    <button
-                      class="nav-link btn-buttom-bar"
-                      id="issued-to-user-btn1"
-                    >
-                      <span class="menu-icon">
-                        <i class="mdi mdi-book-check"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item admin-only hiddennn">
+                    <a href="#issued-to-user-btn">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                        id="issued-to-user-btn1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-book-check"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100 admin-only hiddennn">
-                    <button class="nav-link btn-buttom-bar" id="btn-add-book1">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-book-plus-multiple-outline"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item admin-only hiddennn">
+                    <a href="#btn-add-book">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                        id="btn-add-book1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-book-plus-multiple-outline"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100 admin-only hiddennn">
-                    <button class="nav-link btn-buttom-bar" id="btn-add-user1">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-account-multiple-plus"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item admin-only hiddennn">
+                    <a href="#btn-add-user">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                        id="btn-add-user1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-account-multiple-plus"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100 admin-only hiddennn">
-                    <button class="nav-link btn-buttom-bar" id="issue-page1">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-notebook-edit-outline"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item admin-only hiddennn">
+                    <a href="#issue-page">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                        id="issue-page1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-notebook-edit-outline"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
-                  <li class="nav-item w-100 admin-only hiddennn">
-                    <button class="nav-link btn-buttom-bar" id="return-p1">
-                      <span class="menu-icon">
-                        <i class="mdi mdi-book-sync"></i>
-                      </span>
-                    </button>
+                  <li class="nav-item admin-only hiddennn">
+                    <a href="#return-p">
+                      <button
+                        active="false"
+                        class="nav-link btn-buttom-bar active1"
+                        id="return-p1"
+                      >
+                        <span class="menu-icon">
+                          <i class="mdi mdi-book-sync"></i>
+                        </span>
+                      </button>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -772,7 +824,7 @@
               <label>Password *</label>
               <input
                 type="text"
-                value="admin1"
+                value="admin123"
                 class="form-control p_input"
                 id="passwd"
               />

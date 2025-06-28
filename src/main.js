@@ -59,5 +59,20 @@ document.getElementById("std-only1").addEventListener("click", function () {
 
 document.getElementById("user-logo").addEventListener("click", function () {
   localStorage.removeItem("loginDetails");
+  window.history.pushState({}, "", "/");
   window.location.reload();
+});
+
+window.addEventListener("hashchange", (e) => {
+  const anchors = document.querySelectorAll(".nav-link");
+
+  anchors.forEach((anchor) => {
+    if (anchor.id && document.location.hash.includes(anchor.id)) {
+      anchor.classList.add("active");
+      // document.getElementById(anchor.id + "1").setAttribute("active", "true");
+    } else {
+      anchor.classList.remove("active");
+      // document.getElementById(anchor.id + "1").setAttribute("active", "false");
+    }
+  });
 });

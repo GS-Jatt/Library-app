@@ -3,6 +3,6 @@ dist
 /assets
 .vscode
 .DS_Store
-.parcel-cache  
-
+.parcel-cache
+.zed
 # ^2.9.3

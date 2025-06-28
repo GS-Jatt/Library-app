@@ -1,74 +1,80 @@
-'use strict'
+"use strict";
 import { books, users } from "./get-data.js";
-
+import { compareDesc } from "date-fns";
 
 class Book {
-    constructor(id, name, author, publisher, type, lockerNo) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
-        this.publisher = publisher;
-        this.type = type;
-        this.issuedTo = 0;
-        this.issuedDate = 0;
-        this.lockerNo = lockerNo;
-    }
+  constructor(id, name, author, publisher, type, lockerNo) {
+    this.id = id;
+    this.name = name;
+    this.author = author;
+    this.publisher = publisher;
+    this.type = type;
+    this.issuedTo = 0;
+    this.issuedDate = 0;
+    this.lockerNo = lockerNo;
+  }
 }
 
 // class to display new add book
 class Display {
-    /**
-     * 
-     * @param {take book object } books 
-     * display books on page
-     */
-    add(books) {
-        let tableBody = document.getElementById('tableBody');
-        for (const book of books) {
-            if (book.issuedTo !== 0) {
-                const issueed = new Display().issue;
-                issueed(book);
-            }
-            else {
-                const uiString = `<tr>
+  /**
+   *
+   * @param {take book object } books
+   * display books on page
+   */
+  add(books) {
+    let tableBody = document.getElementById("tableBody");
+    let issueedBooks = [];
+    const issueedDisplay = new Display().issue;
+    for (const book of books) {
+      if (book.issuedTo !== 0) {
+        issueedBooks.push(book);
+      } else {
+        const uiString = `<tr>
                             <td>${book.name}</td>
                             <td>${book.id}</td>
                             <td>${book.author}</td>
                             <td>${book.publisher}</td>
                             <td>${book.type}</td>
                             <td>${book.lockerNo}</td>
-    
+
                           </tr>`;
-                tableBody.innerHTML += uiString;
-            }
-        }
-
-        // let tableBody = document.getElementById('tableBody');
-        // const uiString = `<tr>
-        //                     <td>${book.name}</td>
-        //                     <td>${book.id}</td>
-        //                     <td>${book.author}</td>
-        //                     <td>${book.publisher}</td>
-        //                     <td>${book.type}</td>
-        //                     <td>${book.lockerNo}</td>
-
-        //                   </tr>`;
-        // tableBody.innerHTML += uiString;
+        tableBody.innerHTML += uiString;
+      }
     }
-    /**
-     * 
-     * add issued book to page 
-     * @param { object } book
-     */
-    issue(book) {
-        let user;
-        for (const userr of users.users) {
-            if (userr.id === book.issuedTo) {
-                user = userr;
-            }
-        }
-        let tableBody = document.getElementById('issued-tableBody');
-        const uiString = `<tr>
+
+    issueedBooks.sort((a, b) =>
+      compareDesc(new Date(a.issuedDate), new Date(b.issuedDate)),
+    );
+
+    issueedBooks.forEach((item) => issueedDisplay(item));
+
+    // let tableBody = document.getElementById('tableBody');
+    // const uiString = `<tr>
+    //                     <td>${book.name}</td>
+    //                     <td>${book.id}</td>
+    //                     <td>${book.author}</td>
+    //                     <td>${book.publisher}</td>
+    //                     <td>${book.type}</td>
+    //                     <td>${book.lockerNo}</td>
+
+    //                   </tr>`;
+    // tableBody.innerHTML += uiString;
+  }
+  /**
+   *
+   * add issued book to page
+   * @param { object } book
+   */
+  issue(book) {
+    let user;
+    for (const userr of users.users) {
+      if (userr.id === book.issuedTo) {
+        user = userr;
+      }
+    }
+    let tableBody = document.getElementById("issued-tableBody");
+    const uiString = `<tr>
                             <td>${book.name}</td>
                             <td>${book.id}</td>
                             <td>${book.issuedDate}</td>
@@ -76,71 +82,66 @@ class Display {
                             <td>${user.class}</td>
                             <td>${user.id}</td>
                           </tr>`;
-        tableBody.innerHTML += uiString;
-    }
+    tableBody.innerHTML += uiString;
+  }
 
-    /**
-     * add issued books to users dashboard
-     */
-    dashboard(user) {
-
-        for (const id of user.issueBooksId) {
-            for (const book of books) {
-                if (book.id === id) {
-
-                    let tableBody = document.getElementById('dashboard-tableBody');
-                    const uiString = `<tr>
+  /**
+   * add issued books to users dashboard
+   */
+  dashboard(user) {
+    for (const id of user.issueBooksId) {
+      for (const book of books) {
+        if (book.id === id) {
+          let tableBody = document.getElementById("dashboard-tableBody");
+          const uiString = `<tr>
                             <td>${book.name}</td>
                             <td>${book.id}</td>
                             <td>${book.issuedDate}</td>
                           </tr>`;
-                    tableBody.innerHTML += uiString;
-                }
-            }
+          tableBody.innerHTML += uiString;
         }
+      }
     }
-/**
- * clear the add book form
- */
-    clear() {
-        let libraryForm = document.getElementById('add-book-form');
-        libraryForm.reset();
-    }
+  }
+  /**
+   * clear the add book form
+   */
+  clear() {
+    let libraryForm = document.getElementById("add-book-form");
+    libraryForm.reset();
+  }
 
-    /**
-     * validate the book which to add in library
-     * @param {object} book
-     * @returns 
-     */
-    validate(book) {
-        if (book.name.length < 2 || book.author.length < 2) {
-            return false
-        }
-        else {
-            return true;
-        }
+  /**
+   * validate the book which to add in library
+   * @param {object} book
+   * @returns
+   */
+  validate(book) {
+    if (book.name.length < 2 || book.author.length < 2) {
+      return false;
+    } else {
+      return true;
     }
+  }
 
-    show(type, displayMessage) {
-        let message = document.getElementById('message');
-        let boldText;
-        if (type === 'success') {
-            boldText = 'Success';
-        }
-        else {
-            boldText = 'Error!';
-        }
-        message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+  show(type, displayMessage) {
+    let message = document.getElementById("message");
+    let boldText;
+    if (type === "success") {
+      boldText = "Success";
+    } else {
+      boldText = "Error!";
+    }
+    message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
                                 <strong>${boldText}:</strong> ${displayMessage}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick='message.innerHTML = ""' >
                                 <span aria-hidden="true">×</span>
                                 </button>
                             </div>`;
-        setTimeout(function () {
-            message.innerHTML = ''
-        }, 5000);
-
-    }
+    setTimeout(function () {
+      message.innerHTML = "";
+    }, 3000);
+  }
 }
 
 export { Book, Display };

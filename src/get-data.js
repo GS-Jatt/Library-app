@@ -34,7 +34,8 @@ const BookData = async function () {
   );
   return books.json();
 };
-books = await BookData();
+books = (await BookData()) || [];
+books.sort((a, b) => a.id - b.id);
 
 // getting user data from database
 const UsersData = async function () {

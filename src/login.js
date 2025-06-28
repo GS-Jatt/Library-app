@@ -17,18 +17,23 @@ const dashboard = new Display().dashboard;
 setTimeout(() => {
   if (checker) {
     document.querySelector(".login-pop").classList.remove("hiddennn");
+    document.querySelector(".login-pop").scrollIntoView();
+    document.body.style.overflow = "hidden";
     document.querySelector(".page-body-wrapper").classList.add("blur");
   }
 }, 4000);
 
 document.querySelector("#login-logo").addEventListener("click", function () {
   document.querySelector(".login-pop").classList.toggle("hiddennn");
+  document.querySelector(".login-pop").scrollIntoView();
   document.querySelector(".page-body-wrapper").classList.toggle("blur");
+  document.body.style.overflow = "hidden";
 });
 
 document.querySelector(".btnnn").addEventListener("click", function () {
   document.querySelector(".login-pop").classList.toggle("hiddennn");
   document.querySelector(".page-body-wrapper").classList.toggle("blur");
+  document.body.style.overflow = "auto";
 });
 
 /**
@@ -54,7 +59,8 @@ const afterLogin = function () {
   document.getElementById("login-logo").classList.toggle("hiddennn");
   document.querySelector(".login-pop").classList.add("hiddennn");
   document.querySelector(".page-body-wrapper").classList.remove("blur");
-
+  document.querySelector("#books").classList.add("active");
+  document.body.style.overflow = "auto";
   checker = false;
 };
 const userdataStore = function (id, pass) {
