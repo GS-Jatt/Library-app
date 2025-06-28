@@ -976,7 +976,7 @@ input[type="button"].btn-block {
     }
 
     .btn-buttom-bar {
-        width: inherit;
+        width: 100%;
     }
 
     .table th {
@@ -1737,7 +1737,7 @@ html {
 
 body:has(#sidebar:is(.hiddennn)) {
     .navbar .navbar-menu-wrapper {
-        max-width: calc(100% - 249px);
+        max-width: max(calc(100% - 249px), 600px);
         margin-inline: auto;
         box-shadow: 0px 19px 14px -15px rgba(0, 0, 0, 0.5);
     }
